@@ -30,7 +30,7 @@ list2=grpA+grpB
 for i in list1:
  list2.remove(i)
  list2.remove(i)
-print("2.List of student who play either cricket and badminton:-",list2)
+print("2.List of student who play either cricket and badminton but not both:-",list2)
 list3=grpC
 for i in list1:
   list3.remove(i)
