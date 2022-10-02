@@ -1,0 +1,48 @@
+print("#Assignment 1")
+grpA=[]
+grpB=[]
+grpC=[]
+n=int(input("Enter the no. of player who play Cricket:-"))
+for i in range(0,n):
+  m=input("Enter the name of players who play Cricket:-")
+  grpA.append(m)
+x=int(input("Enter the no. of player who play Badminton:-"))
+for i in range(0,x):
+  y=input("Enter the name of player who play Badminton:-")
+  grpB.append(y)
+p=int(input("Enter the no. of player who play Football:-"))
+for i in range(0,p):
+  q=input("Enter the name of palyer who play Football")
+  grpC.append(q)
+print("Player who play Cricket",grpA)
+print("Player who play Badminton",grpB)
+print("Player who play Football",grpC)
+list1=[]
+list2=[]
+list3=[]
+list4=[]
+for i in range(0,len(grpA)):
+  for j in range(0,len(grpB)):
+    if grpA[i]==grpB[j]:
+      list1.append(grpB[j])
+print("1.List of students who play both cricket and badminton:-",list1)
+list2=grpA+grpB
+for i in list1:
+ list2.remove(i)
+ list2.remove(i)
+print("2.List of student who play either cricket and badminton:-",list2)
+list3=grpC
+for i in list1:
+  list3.remove(i)
+print("3.List of student who play nither cricket not badminton:-",list3)
+list4=grpA+grpC
+list5=grpB
+for i in grpA:
+  for j in grpC:
+    if i==j:
+      list4.remove(j)
+for i in list4:
+  for j in grpB:
+    if i==j:
+      list4.remove(j)
+print("4.List of student who play Cricket and football but not badminton:-",list4)
